@@ -1,0 +1,48 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.inputContainer{
+    padding-left: 10px;
+}
+.inputContainer button{
+    background-color:#b5d1ff ;
+    border-style: none;
+    padding:10px;
+    border-radius: 10px;
+    color:#465c80;
+}
+
+h1{
+    padding-left: 10px;
+    color:#465c80;
+}
+
+.inputContainer input{
+    padding:10px;
+    border-radius: 10px;
+    border-color:#465c80 ;
+    border-style: solid;
+}
+
+.tareaContainer{
+    width: 50%;
+    display: flex;
+}
+
+.tareaContainer div{
+    width: 50%;
+    flex-direction: column;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.tareaContainer div p{
+    padding-top:10px;
+    font-size: medium;
+    text-align: center;
+    border-radius: 10px;
+    height: 30px;
+    background-color: #b5d1ff;
+}
+
