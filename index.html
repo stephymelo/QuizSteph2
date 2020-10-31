@@ -9,27 +9,63 @@
 </head>
 <body>
 
-    <h1>Global Solution SAS</h1>
-    <div class="inputContainer">
-    <input placeholder="Descripcion de la tarea" type="text"></input>
-    <button type="text">Agregar</button>
+   <!--titulo--> <h1>Global Solution SAS</h1>
+
+  <!--inputbox-->  <div class="inputContainer">
+    <input id="input" placeholder="Descripcion de la tarea" type="text"></input>
+    <button id="button" type="text">Agregar</button>
     </div>
 
-    <div class="tareaContainer">
-    <div class="todoContainer">
+  <!--elementoContenedor-->  <div class="tareaContainer">
+      
+    <div id="todoContainer">
         <p>To do</p>
+        <div id="todoTareas">
+
+        </div>
     </div>
 
     <div class="doingContainer">
         <p>Doing</p>
+        <div id="doingTareas">
+
+        </div>
     </div>
 
     <div class="doneContainer">
         <p>Done</p>
+        <div id="doneTareas">
+
+        </div>
     </div>
 
 </div>
 
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyC-jirRH8vbvOjGcpO5oB5E8VZmwfKxP6A",
+    authDomain: "quizsteph-76345.firebaseapp.com",
+    databaseURL: "https://quizsteph-76345.firebaseio.com",
+    projectId: "quizsteph-76345",
+    storageBucket: "quizsteph-76345.appspot.com",
+    messagingSenderId: "640032472214",
+    appId: "1:640032472214:web:4c5107e99f62e801d656b7",
+    measurementId: "G-V8PLPZSN7Z"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
 
 
 

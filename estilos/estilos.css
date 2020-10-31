@@ -1,9 +1,13 @@
 body{
     font-family: 'Montserrat', sans-serif;
+    justify-content: center;
+    align-items: center;
 }
 
 .inputContainer{
     padding-left: 10px;
+    display:flex;
+    justify-content:center;
 }
 .inputContainer button{
     background-color:#b5d1ff ;
@@ -16,25 +20,28 @@ body{
 h1{
     padding-left: 10px;
     color:#465c80;
+    text-align:center;
 }
 
 .inputContainer input{
     padding:10px;
+    margin-right: 10px;
     border-radius: 10px;
     border-color:#465c80 ;
     border-style: solid;
 }
 
 .tareaContainer{
-    width: 50%;
     display: flex;
+    justify-content:center;
 }
 
 .tareaContainer div{
-    width: 50%;
+    width: 300px;
     flex-direction: column;
     margin-right: 10px;
     padding: 10px;
+    text-align: center;
 }
 
 .tareaContainer div p{
@@ -46,3 +53,18 @@ h1{
     background-color: #b5d1ff;
 }
 
+
+.comp{
+    background-color: #e4e7eb;
+}
+
+.tareaCont{
+    background-color: white;
+    padding: 10px;
+}
+
+.deleteBtn{
+    right:10px;
+    top:20px;
+    background-color: red;
+}
