@@ -55,16 +55,81 @@ h1{
 
 
 .comp{
-    background-color: #e4e7eb;
+    background-color:#cfedff;
+    margin-left: -10px;
+    border-radius: 10px;
+    max-width: 280px;
+    
+
 }
 
+
+
 .tareaCont{
-    background-color: white;
-    padding: 10px;
+   
+    max-width: 240px;
+    background-color:white;
+    
+    
+}
+
+.divButtons{
+    display: flex;
+    max-width: fit-content;
+    align-items: center;
+    margin-left: 250px;
+    margin-top:-80px;
+   
+ 
 }
 
 .deleteBtn{
-    right:10px;
-    top:20px;
-    background-color: red;
+    position: relative;
+    background-color: #ff7e73;
+    border-style: none;
+    border-radius: 5px;
+   
+     
+}
+
+.fechaCont{
+    font-size: 5px;
+    margin-left:-40px;
+}
+
+
+.moveLeft{
+    position: relative;
+   
+    background-color: #e9ff8a;
+    border-style: none;
+    border-radius: 5px;
+   
+     
+}
+
+.moveRight{
+    position: relative;
+    
+    background-color: #a3ddff;
+    border-style: none;
+    border-radius: 5px;
+   
+     
+}
+
+#doneTareas{
+    background-color: #e4e7eb;
+    width: 280px;
+    height:400px;
+}
+#doingTareas{
+    background-color: #e4e7eb;
+    width: 280px;
+    height:400px;
+}
+#todoTareas{
+    background-color: #e4e7eb;
+    width: 280px;
+    height:400px;
 }
