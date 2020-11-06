@@ -6,6 +6,7 @@ var fechaSplit=[];
 
 
 
+
 class Tarea{
     constructor(tarealista){
         this.tarealista=tarealista;
@@ -55,7 +56,13 @@ class Tarea{
 
 
 
-      
+               
+        if (estadoDrag==true) { 
+            console.log("aloo");
+        database2.ref('tarea/tareaNueva/'+this.tarealista.id).set(this.tarealista);
+          
+            
+        }  
 
         
    
@@ -64,7 +71,9 @@ class Tarea{
             database2.ref('tarea/tareaNueva/'+this.tarealista.id).set(null);
             location.reload();
             });
-            
+
+         
+                 
 
 
         component.appendChild(fechaCont);
