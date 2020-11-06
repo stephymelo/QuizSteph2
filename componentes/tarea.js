@@ -57,13 +57,7 @@ class Tarea{
 
 
                
-        if (estadoDrag==true) { 
-            console.log("aloo");
-        database2.ref('tarea/tareaNueva/'+this.tarealista.id).set(this.tarealista);
-          
-            
-        }  
-
+    
         
    
         deleteBtn.addEventListener('click', ()=>{
@@ -72,8 +66,26 @@ class Tarea{
             location.reload();
             });
 
-         
+
+            // component.addEventListener('click', ()=>{
+
+            //     if(estadoInicial==false){
+            //         console.log(estadoInicial+"este");
+            //         this.tarealista.estado="todoE"
+            //      database.ref('tarea/tareaNueva/' + this.tarealista.id).set(this.tarealista);
                  
+            //     }
+
+            //     if(estadoInicial==true){
+            //      this.tarealista.estado="doingE"
+            //      database.ref('tarea/tareaNueva/' + this.tarealista.id).set(this.tarealista);
+               
+            //     }
+            // });
+
+          
+
+             
 
 
         component.appendChild(fechaCont);
