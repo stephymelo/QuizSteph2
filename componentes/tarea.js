@@ -25,7 +25,7 @@ class Tarea{
         let component = document.createElement('div');
         component.className="comp";
         component.setAttribute("draggable","true");
-        
+         
 
         let tareaCont = document.createElement('div');
         tareaCont.className="tareaCont"
@@ -33,6 +33,10 @@ class Tarea{
         tareaCont.innerHTML = (
             this.tarealista.i
         );
+
+        let idTarea = document.createElement('div');
+        idTarea.className="idTarea";
+        idTarea.innerHTML = this.tarealista.id;
 
         let fechaCont = document.createElement('div');
         fechaCont.className="fehcaCont";
@@ -67,21 +71,7 @@ class Tarea{
             });
 
 
-            // component.addEventListener('click', ()=>{
-
-            //     if(estadoInicial==false){
-            //         console.log(estadoInicial+"este");
-            //         this.tarealista.estado="todoE"
-            //      database.ref('tarea/tareaNueva/' + this.tarealista.id).set(this.tarealista);
-                 
-            //     }
-
-            //     if(estadoInicial==true){
-            //      this.tarealista.estado="doingE"
-            //      database.ref('tarea/tareaNueva/' + this.tarealista.id).set(this.tarealista);
-               
-            //     }
-            // });
+         
 
           
 
@@ -94,6 +84,7 @@ class Tarea{
         divButtons.appendChild(moveLeft);
         divButtons.appendChild(moveRight);
         component.appendChild(divButtons);
+        component.appendChild(idTarea);
      
 
         return component;

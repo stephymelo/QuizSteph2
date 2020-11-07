@@ -57,6 +57,8 @@ database.ref('tarea/tareaNueva').on('value', function (data) {
                 doneTareas.appendChild(publicarTarea.render());
             }
 
+            
+
         }
     )
 
@@ -66,7 +68,11 @@ database.ref('tarea/tareaNueva').on('value', function (data) {
 
 
 
+document.addEventListener("dragstart", function(event) {
 
+    dragged = event.target;
+   
+  }, false);
 
 
 
@@ -80,25 +86,30 @@ document.addEventListener("drop", function (event) {
     //
     if (event.target.id == "todoTareas" && estadoDrag2 == true) {
         event.target.style.background = "";
-       
+        dragged.parentNode.removeChild( dragged );
+        event.target.appendChild( dragged );
         estadoDrag = false;
         estadoInicial=false;   
-    }else
+    }
+
+   
 
     
 
     //
     if (event.target.id == "doingTareas") {
         event.target.style.background = "";
-       
+        dragged.parentNode.removeChild( dragged );
+        event.target.appendChild( dragged );
         estadoDrag = true;
         estadoDrag2 = true;
         estadoInicial=true;    
-    }else
+    }
 
     if (event.target.id == "doneTareas" && estadoDrag == true) {
         event.target.style.background = "";
-      
+        dragged.parentNode.removeChild( dragged );
+        event.target.appendChild( dragged );
         estadoDrag2 = false;   
     }
 
@@ -106,8 +117,9 @@ document.addEventListener("drop", function (event) {
     database.ref('tarea/tareaNueva').once('value', function (data) {
         data.forEach(
             nuevaTarea => {
-            
-
+            console.log(dragged.querySelector('.idTarea').innerHTML);
+             if( dragged.querySelector('.idTarea').innerHTML==nuevaTarea.val().id){
+               
                 switch(event.target.id){
                     case "todoTareas" :
                         database.ref('tarea/tareaNueva/' + nuevaTarea.val().id).set(
@@ -137,10 +149,12 @@ document.addEventListener("drop", function (event) {
                         );
                         break;
                 }
+            }
                 
             })
     })
 
+    
 
 
 
