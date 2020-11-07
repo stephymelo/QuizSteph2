@@ -14,8 +14,6 @@ class Tarea{
     }
     
 
-  
-   
 
     render=()=>{
         this.fecha=new Date();
@@ -67,7 +65,7 @@ class Tarea{
         deleteBtn.addEventListener('click', ()=>{
            
             database2.ref('tarea/tareaNueva/'+this.tarealista.id).set(null);
-            location.reload();
+            
             });
 
 
