@@ -68,9 +68,7 @@ database.ref('tarea/tareaNueva').on('value', function (data) {
 
 
 
-document.addEventListener("dragstart", function (event) {
-    dragged = event.target;
-}, false);
+
 
 document.addEventListener("dragover", function (event) {
     event.preventDefault();
@@ -82,8 +80,7 @@ document.addEventListener("drop", function (event) {
     //
     if (event.target.id == "todoTareas" && estadoDrag2 == true) {
         event.target.style.background = "";
-        dragged.parentNode.removeChild(dragged);
-        event.target.appendChild(dragged);
+       
         estadoDrag = false;
         estadoInicial=false;   
     }else
@@ -93,8 +90,7 @@ document.addEventListener("drop", function (event) {
     //
     if (event.target.id == "doingTareas") {
         event.target.style.background = "";
-        dragged.parentNode.removeChild(dragged);
-        event.target.appendChild(dragged);
+       
         estadoDrag = true;
         estadoDrag2 = true;
         estadoInicial=true;    
@@ -102,8 +98,7 @@ document.addEventListener("drop", function (event) {
 
     if (event.target.id == "doneTareas" && estadoDrag == true) {
         event.target.style.background = "";
-        dragged.parentNode.removeChild(dragged);
-        event.target.appendChild(dragged);
+      
         estadoDrag2 = false;   
     }
 
@@ -111,7 +106,7 @@ document.addEventListener("drop", function (event) {
     database.ref('tarea/tareaNueva').once('value', function (data) {
         data.forEach(
             nuevaTarea => {
-                console.log(nuevaTarea.val().estado);
+            
 
                 switch(event.target.id){
                     case "todoTareas" :
